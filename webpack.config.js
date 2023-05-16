@@ -96,18 +96,11 @@ module.exports = (env) => {
         ? [new TerserPlugin(), new CssMinimizerPlugin()]
         : [],
       splitChunks: {
-        chunks: "initial",
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
+            name: "vendors",
             chunks: "all",
-            name: (module, chunks) => {
-              const allChunksNames = chunks.map(({ name }) => name).join(".");
-              const moduleName = (module.context.match(
-                /[\\/]node_modules[\\/](.*?)([\\/]|$)/
-              ) || [])[1];
-              return `${moduleName}.${allChunksNames}`;
-            },
           },
         },
       },
