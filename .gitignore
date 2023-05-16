@@ -3,3 +3,4 @@
 .env
 tsconfig.tsbuildinfo
 .DS_Store
+.yarn
