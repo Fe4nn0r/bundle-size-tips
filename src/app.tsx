@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import ErrorBoundary, { ErrorLayout } from "components/error-boundary/index";

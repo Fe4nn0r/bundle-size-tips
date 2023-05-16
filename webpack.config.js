@@ -5,6 +5,8 @@ const Dotenv = require("dotenv-webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const zlib = require("zlib");
 
 const getPlugins = (isProduction) => {
@@ -38,7 +40,9 @@ const getPlugins = (isProduction) => {
         threshold: 10240,
         minRatio: 0.8,
         deleteOriginalAssets: false,
-      })
+      }),
+
+      new BundleAnalyzerPlugin()
     );
   }
   return plugins;
