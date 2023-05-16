@@ -1,12 +1,15 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import ErrorBoundary, { ErrorLayout } from "components/error-boundary/index";
 import Home from "pages/home";
 import Layout from "components/layout";
-import Page1 from "pages/page1";
-import Page2 from "pages/page2";
-import MomentPage from "pages/moment";
+
+const Page1 = lazy(() => /* webpackChunkName: "Page1" */ import("pages/page1"));
+const Page2 = lazy(() => /* webpackChunkName: "Page2" */ import("pages/page2"));
+const MomentPage = lazy(
+  () => /* webpackChunkName: "MomentPage" */ import("pages/moment")
+);
 
 const router = createBrowserRouter([
   {
@@ -32,7 +35,9 @@ export default function App() {
     <React.StrictMode>
       <ErrorBoundary fallback={<ErrorLayout />}>
         <Layout>
-          <RouterProvider router={router} />
+          <Suspense fallback="Loading...">
+            <RouterProvider router={router} />
+          </Suspense>
         </Layout>
       </ErrorBoundary>
     </React.StrictMode>
