@@ -61,6 +61,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:99c5bd2a89f9d937386b3727cbf15cb54c5882abe957f1304820aa8c5d772ba014e398173abeb0c6cfe5ba39265d25590399139d70ba3e5f04825442a175357c#npm:29.5.0"],\
             ["lint-staged", "npm:13.2.2"],\
             ["mapbox-gl", "npm:2.14.1"],\
+            ["moment", "npm:2.29.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:99c5bd2a89f9d937386b3727cbf15cb54c5882abe957f1304820aa8c5d772ba014e398173abeb0c6cfe5ba39265d25590399139d70ba3e5f04825442a175357c#npm:18.2.0"],\
             ["react-router", "virtual:99c5bd2a89f9d937386b3727cbf15cb54c5882abe957f1304820aa8c5d772ba014e398173abeb0c6cfe5ba39265d25590399139d70ba3e5f04825442a175357c#npm:6.11.1"],\
@@ -11395,6 +11396,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:99c5bd2a89f9d937386b3727cbf15cb54c5882abe957f1304820aa8c5d772ba014e398173abeb0c6cfe5ba39265d25590399139d70ba3e5f04825442a175357c#npm:29.5.0"],\
             ["lint-staged", "npm:13.2.2"],\
             ["mapbox-gl", "npm:2.14.1"],\
+            ["moment", "npm:2.29.4"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:99c5bd2a89f9d937386b3727cbf15cb54c5882abe957f1304820aa8c5d772ba014e398173abeb0c6cfe5ba39265d25590399139d70ba3e5f04825442a175357c#npm:18.2.0"],\
             ["react-router", "virtual:99c5bd2a89f9d937386b3727cbf15cb54c5882abe957f1304820aa8c5d772ba014e398173abeb0c6cfe5ba39265d25590399139d70ba3e5f04825442a175357c#npm:6.11.1"],\
@@ -19390,6 +19392,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/mkdirp-npm-1.0.4-37f6ef56b9-a96865108c.zip/node_modules/mkdirp/",\
           "packageDependencies": [\
             ["mkdirp", "npm:1.0.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["moment", [\
+        ["npm:2.29.4", {\
+          "packageLocation": "./.yarn/cache/moment-npm-2.29.4-902943305d-0ec3f9c2bc.zip/node_modules/moment/",\
+          "packageDependencies": [\
+            ["moment", "npm:2.29.4"]\
           ],\
           "linkType": "HARD"\
         }]\

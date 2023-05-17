@@ -31,6 +31,14 @@ const Buttons = () => {
       >
         Another page
       </Button>
+
+      <Button
+        variant={pathname === "/moment" ? "contained" : "outlined"}
+        component={Link}
+        to="/moment"
+      >
+        moment.js example
+      </Button>
     </Stack>
   );
 };
