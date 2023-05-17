@@ -102,7 +102,7 @@ module.exports = (env) => {
       splitChunks: {
         cacheGroups: {
           vendor: {
-            test: /[\\/]node_modules[\\/]/,
+            test: /[\\/]node_modules[\\/]((?!(mapbox-gl)).*)[\\/]/,
             name: "vendors",
             chunks: "all",
           },
