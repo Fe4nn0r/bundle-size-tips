@@ -1,4 +1,5 @@
 /* eslint-env node */
+const webpack = require("webpack");
 const CompressionPlugin = require("compression-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
@@ -17,6 +18,10 @@ const getPlugins = (isProduction) => {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       favicon: path.join(__dirname, "./src/assets/images/favicon.png"),
+    }),
+    new webpack.IgnorePlugin({
+      resourceRegExp: /^\.\/locale$/,
+      contextRegExp: /moment$/,
     }),
   ];
   if (isProduction) {

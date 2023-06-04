@@ -1,5 +1,7 @@
 import React from "react";
 import moment from "moment";
+import "moment/locale/fr";
+import "moment/locale/en-gb";
 import Buttons from "components/buttons";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
