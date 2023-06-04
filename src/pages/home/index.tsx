@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { startTransition, useState } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Buttons from "components/buttons";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { Map } from "components/map";
+import { LazyMap } from "components/map";
 
 export default function Home() {
   const [showMap, setShowMap] = useState(false);
@@ -33,14 +33,17 @@ export default function Home() {
         <Button
           variant="contained"
           color="primary"
-          onClick={() => setShowMap(!showMap)}
-          style={{ marginBottom: "3em" }}
+          onClick={() => {
+            startTransition(() => {
+              setShowMap(!showMap);
+            });
+          }}
         >
           Toggle map
         </Button>
       </Stack>
 
-      {showMap && <Map />}
+      {showMap && <LazyMap />}
     </section>
   );
 }
