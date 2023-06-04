@@ -24,8 +24,18 @@ export default function Home() {
 
       <Buttons />
 
-      <Stack direction="row" spacing={2}>
-        <Button color="secondary" onClick={() => setShowMap(!showMap)}>
+      <Stack
+        style={{ marginTop: "3em" }}
+        align="center"
+        direction="column"
+        spacing={2}
+      >
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => setShowMap(!showMap)}
+          style={{ marginBottom: "3em" }}
+        >
           Toggle map
         </Button>
       </Stack>

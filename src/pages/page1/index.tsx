@@ -20,7 +20,9 @@ export default function Page1() {
       </Container>
       <Buttons />
 
-      <img src={`data:image/jpeg;base64,${photo.base64}`} />
+      <div style={{ marginTop: "3em" }}>
+        <img width="1024px" src={`data:image/jpeg;base64,${photo.base64}`} />
+      </div>
     </section>
   );
 }

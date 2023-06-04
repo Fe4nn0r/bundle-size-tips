@@ -3,6 +3,7 @@ import moment from "moment";
 import Buttons from "components/buttons";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Stack from "@mui/material/Stack";
 
 function getFormattedDate(locale: string) {
   moment.locale(locale);
@@ -22,11 +23,18 @@ export default function MomentPage() {
         >
           Moment.js example
         </Typography>
-
-        <div>FR: {getFormattedDate("fr-FR")}</div>
-        <div>EN: {getFormattedDate("en-GB")}</div>
       </Container>
       <Buttons />
+
+      <Stack
+        style={{ marginTop: "3em" }}
+        align="center"
+        direction="column"
+        spacing={2}
+      >
+        <div>FR: {getFormattedDate("fr-FR")}</div>
+        <div>EN: {getFormattedDate("en-GB")}</div>
+      </Stack>
     </section>
   );
 }
